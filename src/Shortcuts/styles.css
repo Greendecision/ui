@@ -1,0 +1,24 @@
+.ShortcutHint-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+}
+.ShortcutHint-KeyList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 4px
+}
+
+.ShortcutHint-Key {
+  display: grid;
+  place-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 2px 4px
+}

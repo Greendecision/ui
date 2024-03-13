@@ -1,0 +1,20 @@
+.EditableTypography-Content {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+}
+
+.EditableTypography-EditIcon {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.EditableTypography-Loading {
+  padding: 8px 0px;
+}
+
+.EditableTypography-Editing {
+  display: flex;
+  place-items: center;
+}
