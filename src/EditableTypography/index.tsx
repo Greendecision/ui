@@ -42,7 +42,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
     placeHolder,
   } = props;
   const [isEditVisible, setIsEditVisible] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState<boolean>(false);
   const [newText, setNewText] = useState(originalText || text);
 
   const fontSize = defaultTheme.typography[variant].fontSize;
@@ -99,7 +99,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
     }
   };
 
-  const toggleEditMode = (enable) => {
+  const toggleEditMode = (enable: boolean) => {
     setIsEditVisible(false);
     setIsEditing(enable);
   };
