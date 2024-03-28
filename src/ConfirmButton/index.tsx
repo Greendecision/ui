@@ -20,9 +20,7 @@ export const ConfirmButton: React.FC<CompProps> = (props: CompProps) => {
   const { children, confirmText, confirmAction, firstClickCallback } = props;
 
   // remove elements that are not ButtonProps
-  const buttonProps = { ...props };
-  delete buttonProps.confirmText;
-  delete buttonProps.confirmAction;
+  const buttonProps: ButtonProps = { ...props };
 
   const [isConfirming, setIsConfirming] = useState(false);
 

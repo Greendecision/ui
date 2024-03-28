@@ -45,7 +45,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [newText, setNewText] = useState(originalText || text);
 
-  const fontSize = defaultTheme.typography[variant].fontSize;
+  const fontSize = defaultTheme.typography[variant || "body1"].fontSize;
   const fontSizeValue = Number.parseFloat(
     fontSize.substring(0, fontSize.length - 3),
   ); // I remove 'rem' from the end of the string
