@@ -11,8 +11,6 @@ import { Link, createTheme } from "@mui/material";
 import Skeleton from "@mui/material/Skeleton";
 import "./styles.css";
 
-// import { useAlert } from "@greendecision/hooks";
-
 interface CompProps {
   text: string;
   originalText?: string;
