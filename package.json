@@ -7,12 +7,16 @@
     "test": "npm run index.js",
     "check-errors": "npx @biomejs/biome check src && tsc --noEmit && echo 'No errors found'"
   },
-  "keywords": ["ui", "material-ui", "react"],
+  "keywords": [
+    "ui",
+    "material-ui",
+    "react"
+  ],
   "author": "Fabio Rosada",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Greendecision/ui"
+    "url": "git+https://github.com/Greendecision/ui.git"
   },
   "dependencies": {
     "@mui/icons-material": "^5.15.12",
@@ -22,5 +26,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Greendecision/ui/issues"
+  },
+  "homepage": "https://github.com/Greendecision/ui#readme"
 }

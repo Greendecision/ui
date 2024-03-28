@@ -15,7 +15,7 @@ interface CompProps extends ButtonProps {
  * @param props confirmAction: action to be executed when the button is clicked, confirmText: text to be displayed when the button is clicked, default: "Confirm?"
  * @returns a simple button equal to the material-ui button
  */
-const ConfirmButton: React.FC<CompProps> = (props: CompProps) => {
+export const ConfirmButton: React.FC<CompProps> = (props: CompProps) => {
   const { children, confirmText, confirmAction } = props;
 
   // remove elements that are not ButtonProps
