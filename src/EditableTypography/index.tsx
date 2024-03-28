@@ -5,7 +5,9 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import IconButton from "@mui/material/IconButton";
 import TextField from "@mui/material/TextField";
-import Typography, { TypographyProps } from "@mui/material/Typography";
+import Typography from "@mui/material/Typography";
+import { Variant } from "@mui/material/styles/createTypography";
+
 
 import { Link, createTheme } from "@mui/material";
 import Skeleton from "@mui/material/Skeleton";
@@ -14,7 +16,7 @@ import "./styles.css";
 interface CompProps {
   text: string;
   originalText?: string;
-  variant: TypographyProps["variant"];
+  variant: Variant;
   onChange?: (newText: string) => void;
   onDelete?: () => void;
   width?: number;
@@ -45,13 +47,12 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [newText, setNewText] = useState(originalText || text);
 
-  const fontSize = defaultTheme.typography[variant || "body1"].fontSize;
+  const fontSize = defaultTheme.typography[variant].fontSize;
   const fontSizeValue = Number.parseFloat(
-    fontSize.substring(0, fontSize.length - 3),
-  ); // I remove 'rem' from the end of the string
-  /*     useEffect(() => {
-    setNewText(isEditing ? originalText || text : text);
-  }, [text, originalText, isEditing]); */
+    Number.isNaN(fontSize)
+      ? String(fontSize).substring(0, String(fontSize).length - 3)
+      : String(fontSize),
+  ); // removes 'rem' from the end of the string, if present
 
   useEffect(() => {
     setNewText(text);
@@ -94,7 +95,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   const commitChange = () => {
     if (onChange) {
       const formattedValue = newText.replace(",", ".");
-      onChange(formattedValue);
+      onChange?.(formattedValue);
       toggleEditMode(false);
     }
   };
@@ -159,7 +160,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
           <IconButton
             onClick={() => {
               toggleEditMode(false);
-              onChange(newText);
+              onChange?.(newText);
             }}
           >
             <CheckIcon />
