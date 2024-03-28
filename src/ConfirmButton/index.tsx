@@ -5,6 +5,7 @@ import { Button, ButtonProps } from "@mui/material";
 interface CompProps extends ButtonProps {
   confirmAction: () => void; // action to be executed when the button is clicked twice
   confirmText?: string; // default: "Confirm?"
+  firstClickCallback?: () => void; // called when the button is clicked once
 }
 
 /**
@@ -16,7 +17,7 @@ interface CompProps extends ButtonProps {
  * @returns a simple button equal to the material-ui button
  */
 export const ConfirmButton: React.FC<CompProps> = (props: CompProps) => {
-  const { children, confirmText, confirmAction } = props;
+  const { children, confirmText, confirmAction, firstClickCallback } = props;
 
   // remove elements that are not ButtonProps
   const buttonProps = { ...props };
@@ -31,6 +32,7 @@ export const ConfirmButton: React.FC<CompProps> = (props: CompProps) => {
       confirmAction();
       setIsConfirming(false);
     } else {
+      firstClickCallback?.();
       setIsConfirming(true);
     }
   };
