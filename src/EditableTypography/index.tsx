@@ -14,7 +14,6 @@ import "./styles.css";
 
 interface CompProps {
   text: string;
-  originalText?: string;
   variant: Variant;
   onChange?: (newText: string) => void;
   onDelete?: () => void;
@@ -31,7 +30,6 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   const defaultTheme = createTheme({});
   const {
     text,
-    originalText,
     variant,
     multiline,
     onChange,
@@ -44,7 +42,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   } = props;
   const [isEditVisible, setIsEditVisible] = useState(false);
   const [isEditing, setIsEditing] = useState<boolean>(false);
-  const [newText, setNewText] = useState(originalText || text);
+  const [newText, setNewText] = useState(text);
 
   const fontSize = defaultTheme.typography[variant].fontSize;
   const fontSizeValue = Number.parseFloat(

@@ -5,7 +5,7 @@ import ShortcutHint, { HintCompProps } from "./shortcutHint";
 import "./styles.css";
 
 interface CompProps {
-  button: string; // array of keys to be shown
+  button: string; // key to be pressed for the shortcut
   onShortcutCalled?: () => void; // function to be called when the shortcut is pressed
   ctrl: boolean; // if Ctrl key is part of the shortcut
   shift: boolean; // if Shift key is part of the shortcut
