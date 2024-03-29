@@ -29,9 +29,6 @@ interface CompProps {
 export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   const defaultTheme = createTheme({});
 
-
-
-  
   const {
     text,
     variant,
