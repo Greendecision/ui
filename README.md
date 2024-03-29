@@ -36,7 +36,7 @@ git push
 And finally, publish the package to npm:
 
 ```bash
-npm publish
+npm run publish
 ```
 
 ## Testing

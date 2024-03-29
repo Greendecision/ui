@@ -8,7 +8,8 @@
     "linter-fix": "npx @biomejs/biome check src --apply",
     "ts-check": "tsc --noEmit",
     "check-errors": "npm run linter && npm run ts-check && echo 'No errors found'",
-    "preversion": "npm run linter-fix && npm run ts-check && ./check-git.sh 'biome style fix (--apply)'"
+    "preversion": "npm run linter-fix && npm run ts-check && ./check-git.sh 'biome style fix (--apply)'",
+    "publish": "npm publish --access public"
   },
   "keywords": [
     "ui",
