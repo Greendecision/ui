@@ -1,6 +1,6 @@
 {
   "name": "@greendecision/ui",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "A set of custom react UI components, some based on Material-UI, some made from scratch.",
   "main": "index.js",
   "scripts": {
