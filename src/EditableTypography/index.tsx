@@ -46,9 +46,6 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [newText, setNewText] = useState(originalText || text);
 
-
-  
-
   const fontSize = defaultTheme.typography[variant].fontSize;
   const fontSizeValue = Number.parseFloat(
     Number.isNaN(fontSize)
