@@ -8,7 +8,6 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { Variant } from "@mui/material/styles/createTypography";
 
-
 import { Link, createTheme } from "@mui/material";
 import Skeleton from "@mui/material/Skeleton";
 import "./styles.css";
@@ -46,6 +45,9 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
   const [isEditVisible, setIsEditVisible] = useState(false);
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [newText, setNewText] = useState(originalText || text);
+
+
+  
 
   const fontSize = defaultTheme.typography[variant].fontSize;
   const fontSizeValue = Number.parseFloat(
