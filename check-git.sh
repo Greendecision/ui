@@ -8,6 +8,6 @@ if [[ `git status --porcelain` ]]; then
   git add .
   git commit -m "auto: $1"
 else
-  echo "There are no changes"
+  echo "check-git: There are no changes to commit"
   exit 0
 fi
