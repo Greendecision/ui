@@ -4,8 +4,11 @@
   "description": "A set of custom react UI components, some based on Material-UI, some made from scratch.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run index.js",
-    "check-errors": "npx @biomejs/biome check src && tsc --noEmit && echo 'No errors found'"
+    "linter": "npx @biomejs/biome check src",
+    "linter-fix": "npx @biomejs/biome check src --apply",
+    "ts-check": "tsc --noEmit",
+    "check-errors": "npm run linter && npm run ts-check && echo 'No errors found'",
+    "preversion": "npm run linter-fix && npm run ts-check"
   },
   "keywords": [
     "ui",
@@ -19,6 +22,8 @@
     "url": "git+https://github.com/Greendecision/ui.git"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.12",
     "@mui/material": "^5.15.12",
     "react": "^18.0.0",
