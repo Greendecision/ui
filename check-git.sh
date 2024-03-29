@@ -9,5 +9,5 @@ if [[ `git status --porcelain` ]]; then
   git commit -m "auto: $1"
 else
   echo "There are no changes"
-  exit 0
+  exit 1
 fi
