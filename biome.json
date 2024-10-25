@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.6.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "organizeImports": {
     "enabled": true
   },
@@ -9,11 +9,11 @@
       "recommended": true,
       "suspicious": {
         "noConsoleLog": "warn",
-        "noArrayIndexKey": "warn",
+        "noArrayIndexKey": "error",
         "noExplicitAny": "warn"
       },
       "correctness": {
-        "noUnusedImports": "warn"
+        "noUnusedImports": "off"
       },
       "complexity": {
         "noForEach": "off"
@@ -27,7 +27,8 @@
         "useImportType": "off"
       },
       "performance": {
-        "noDelete": "off"
+        "noDelete": "warn",
+        "noAccumulatingSpread": "warn"
       }
     }
   },
@@ -41,6 +42,6 @@
     "ignore": []
   },
   "files": {
-    "ignore": ["src/aws-exports.js", "src/graphql/*", "src/API.ts"]
+    "ignore": []
   }
 }
