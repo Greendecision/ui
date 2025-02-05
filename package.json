@@ -32,7 +32,9 @@
     "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4"
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
   },
   "bugs": {
     "url": "https://github.com/Greendecision/ui/issues"
