@@ -131,7 +131,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
               setNewText(event.target.value);
             }} */
             onChange={handleInputChange}
-            multiline={multiline ? true : false}
+            multiline={!!multiline}
             maxRows={multiline ? multiline : 1}
             style={{ width }}
             inputProps={{
@@ -145,7 +145,7 @@ export const EditableTypography: React.FC<CompProps> = (props: CompProps) => {
                 fontSize: `calc( ${fontSize} - 2px )`,
               },
             }}
-            onKeyDown={(event) => {
+            onKeyDown={(event: any) => {
               //event from keyboard
               if (event.code === "Enter" && (event.ctrlKey || !multiline)) {
                 /* toggleEditMode(false);

@@ -23,15 +23,18 @@
     "url": "git+https://github.com/Greendecision/ui.git"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.12",
-    "@mui/material": "^5.15.12",
-    "react": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.4.3",
+    "@mui/material": "^6.4.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.1"
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
   },
   "bugs": {
     "url": "https://github.com/Greendecision/ui/issues"
