@@ -11,7 +11,11 @@
     "preversion": "npm run linter-fix && npm run ts-check && ./check-git.sh 'biome style fix (--apply)'",
     "publish": "npm publish --access public"
   },
-  "keywords": ["ui", "material-ui", "react"],
+  "keywords": [
+    "ui",
+    "material-ui",
+    "react"
+  ],
   "author": "Fabio Rosada",
   "license": "MIT",
   "repository": {
@@ -21,9 +25,10 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.5",
-    "@mui/material": "^6.1.5",
+    "@mui/icons-material": "^6.4.3",
+    "@mui/material": "^6.4.3",
     "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
