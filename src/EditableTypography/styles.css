@@ -3,6 +3,8 @@
   flex-direction: row;
   width: fit-content;
   align-items: center;
+  padding: 0px 2px;
+  transition: background 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 
 .EditableTypography-EditIcon {
@@ -17,4 +19,11 @@
 .EditableTypography-Editing {
   display: flex;
   place-items: center;
+}
+
+.EditableTypography-Content:hover {
+  background: #00000010;
+  padding: 0px 2px;
+  border-radius: 8px;
+  cursor: pointer;
 }
